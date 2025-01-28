@@ -50,6 +50,30 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
   searchCity(searchInput.value);
 }
+
+function displayForecast() {
+  let days = ["Wed", "Thur", "Fir", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast-day">
+            <div class="forecast-date">Tue</div>
+            <div class="forecast-icon">☀️</div>
+            <div class="forecast-temperatures">
+              <div class="forecast-temperature">
+                <strong> 18°C</strong>
+              </div>
+              <div class="forecast-temperature">13°C</div>
+            </div>
+            </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Poznań");
+displayForecast();
