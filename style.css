@@ -3,7 +3,7 @@ body {
   font-family: "Ubuntu", serif;
 }
 a {
-  color: rgba(46, 56, 242, 0.915);
+  color: rgba(205, 31, 170, 0.915);
 }
 .weather-app {
   background: rgba(251, 210, 149, 0.707);
@@ -87,6 +87,7 @@ main {
 }
 .forecast-day :hover {
   transform: scale(1.5);
+  transition: all ease-in-out 250ms;
 }
 .forecast-date {
   text-align: center;
